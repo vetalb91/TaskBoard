@@ -30,32 +30,27 @@ $("#add_post").submit(function (e) {
     let name = $.trim($("#name").val());
     let email = $.trim($("#email").val());
     let text = $.trim($("#text").val());
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(name == '' || email == '' || text == ''){
 
-
         $("#empty_fields").html("<b style='color: red'>Соответствующие поля не заполнены</b>");
-    } else {
-        $(this).unbind().submit();
+    }else{
+        if(re.test(email)){
+            $(this).unbind().submit();
+        }else{
+            $("#empty_fields").html("<b style='color: red'>Не валидный email</b>");
+        }
     }
+
+
+
+
+
 
 
 });
 
-
-
-$('#email').on('blur', function () {
-    let email = $(this).val();
-
-    if (email.length > 0
-        && (email.match(/.+?\@.+/g) || []).length !== 1) {
-        console.log('invalid');
-        alert('Вы ввели некорректный e-mail!');
-    } else {
-        console.log('valid');
-        alert('Вы ввели корректный e-mail!');
-    }
-});
 
 
 
