@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Виталик
- * Date: 03.04.2020
- * Time: 16:42
- */
-
     session_start();
 
     define("ROOT",$_SERVER['DOCUMENT_ROOT']);
@@ -15,7 +8,7 @@
 
     require_once("db.php");
     require_once("route.php");
-    require_once MODEL_PATH. 'Model.php';
+    require_once MODEL_PATH . 'Model.php';
     require_once VIEW_PATH. 'View.php';
     require_once CONTROLLER_PATH . 'Controller.php';
 

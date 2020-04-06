@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Виталик
- * Date: 03.04.2020
- * Time: 18:00
- */
 
  class IndexModel extends Model {
 

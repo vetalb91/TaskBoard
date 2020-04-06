@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Виталик
- * Date: 03.04.2020
- * Time: 17:55
- */
+
 
  class IndexController extends Controller{
      private $pageTpl = '/views/main.tpl.php';

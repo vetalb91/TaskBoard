@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Виталик
- * Date: 03.04.2020
- * Time: 17:47
- */
 
   class Model {
      protected $db = null;
